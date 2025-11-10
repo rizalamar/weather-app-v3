@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import WeatherForm from "./components/WeatherForm";
 import WeatherCard from "./components/Card/WeatherCard";
+import { getDynamicBackground } from "./helper/helper";
 
 export default function App() {
 	const [city, setCity] = useState("");
 	const [weather, setWeather] = useState(null);
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
+
+	const currentIcon = weather?.currentConditions.icon;
+	const bgClass = getDynamicBackground(currentIcon);
 
 	async function handleSubmit(e) {
 		e.preventDefault();
@@ -70,7 +74,9 @@ export default function App() {
 	}, [weather]);
 
 	return (
-		<main className="flex flex-col items-center min-h-screen p-6 text-white bg-slate-900">
+		<main
+			className={`flex flex-col items-center min-h-screen p-6 text-white ${bgClass}`}
+		>
 			<WeatherForm
 				city={city}
 				setCity={setCity}
