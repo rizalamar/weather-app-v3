@@ -9,7 +9,9 @@ export default function DailyForecast({ weather }) {
 
 	return (
 		<div className="h-full px-1">
-			<h2 className="px-3 mb-2 text-lg font-semibold">10-Day Forecast</h2>
+			<h2 className="px-3 mb-2 text-lg font-semibold text-center">
+				10-Day Forecast
+			</h2>
 			<div className="flex flex-col items-stretch gap-3 py-2 overflow-y-auto">
 				{daily?.map((day) => (
 					<div
@@ -23,7 +25,7 @@ export default function DailyForecast({ weather }) {
 						<img
 							src={getIcon(day.icon)}
 							alt={day.conditions}
-							className="w-10 h-10 invert"
+							className="w-10 h-10"
 						/>
 
 						<div className="w-12 font-semibold">
@@ -33,10 +35,10 @@ export default function DailyForecast({ weather }) {
 						</div>
 
 						<div className="flex items-center flex-1 gap-2">
-							<span className="text-xs text-gray-300">
+							<span className="text-xs text-slate-900">
 								{Math.round(day.tempmin)}°
 							</span>
-							<div className="relative w-full h-2 rounded bg-gray-300/30">
+							<div className="relative w-full h-2 bg-gray-500 rounded">
 								<div
 									className="absolute h-2 rounded bg-yellow-300/80"
 									style={{
@@ -53,7 +55,7 @@ export default function DailyForecast({ weather }) {
 									}}
 								></div>
 							</div>
-							<span className="text-xs text-gray-300">
+							<span className="text-xs text-slate-900">
 								{Math.round(day.tempmax)}°
 							</span>
 						</div>

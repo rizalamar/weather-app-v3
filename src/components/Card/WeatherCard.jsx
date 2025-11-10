@@ -12,7 +12,7 @@ export default function WeatherCard({ weather }) {
 	if (!current) return null;
 
 	return (
-		<section className="flex flex-col items-center w-full max-h-[650px] h-[650px] max-w-sm p-5 space-y-5 shadow-lg rounded-xl bg-white/10 backdrop-blur-sm">
+		<section className="flex flex-col items-center w-full max-h-[650px] h-[650px] max-w-sm p-5 space-y-5 shadow-lg rounded-xl backdrop-blur-sm text-slate-900">
 			{/* Current date and time */}
 			<DateTime timezone={weather.timezone} />
 

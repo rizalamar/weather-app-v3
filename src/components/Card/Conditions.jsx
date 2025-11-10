@@ -6,7 +6,7 @@ export default function Conditions({ conditions, feelslike, icon }) {
 			<img
 				src={getIcon(icon)}
 				alt={conditions}
-				className="object-contain w-30 h-30 invert brightness-0"
+				className="object-contain w-30 h-30 brightness-0"
 			/>
 			<p className="text-2xl font-medium">{conditions}</p>
 			<p className="text-base">Feels like {Math.round(feelslike)}°</p>
