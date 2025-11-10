@@ -20,16 +20,13 @@ export default function WeatherCard({ weather }) {
 			<Address location={weather.resolvedAddress} />
 
 			{/* Temp and Icon */}
-			<TempIcon
-				temp={current.temp}
-				icon={current.icon}
-				conditions={current.conditions}
-			/>
+			<TempIcon temp={current.temp} />
 
 			{/* Condition */}
 			<Conditions
 				conditions={current.conditions}
 				feelslike={current.feelslike}
+				icon={current.icon}
 			/>
 
 			{/* Additional Info */}
