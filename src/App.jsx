@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import WeatherForm from "./components/WeatherForm";
 import WeatherCard from "./components/Card/WeatherCard";
 import { getDynamicBackground } from "./helper/helper";
+import WeatherForecast from "./components/Forecast/WeatherForecast";
 
 export default function App() {
 	const [city, setCity] = useState("");
@@ -75,7 +76,7 @@ export default function App() {
 
 	return (
 		<main
-			className={`flex flex-col items-center min-h-screen p-6 text-white ${bgClass}`}
+			className={`flex flex-col items-center min-h-screen p-6 text-white ${bgClass} transition-colors duration-700`}
 		>
 			<WeatherForm
 				city={city}
@@ -85,7 +86,10 @@ export default function App() {
 				loading={loading}
 			/>
 
-			<WeatherCard weather={weather} />
+			<div className="flex items-center justify-center gap-4">
+				<WeatherCard weather={weather} />
+				<WeatherForecast weather={weather} />
+			</div>
 		</main>
 	);
 }

@@ -29,6 +29,12 @@ export function getTime(timezone) {
 	return timePart;
 }
 
+export function getShortDay(day) {
+	const date = new Date(day);
+
+	return date.toLocaleDateString("en-US", { weekday: "short" });
+}
+
 export function getDynamicBackground(conditions) {
 	const weatherBackgrounds = {
 		"clear-day": "bg-linear-to-b from-blue-400 to-blue-200",
