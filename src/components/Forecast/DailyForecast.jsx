@@ -28,10 +28,10 @@ export default function DailyForecast({ weather }) {
 							className="w-10 h-10"
 						/>
 
-						<div className="w-12 font-semibold">
+						<div className="w-12 font-semibold text-center">
 							{day.precipprob
 								? `${Math.round(day.precipprob)}%`
-								: ""}
+								: "-"}
 						</div>
 
 						<div className="flex items-center flex-1 gap-2">
