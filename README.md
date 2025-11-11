@@ -19,7 +19,7 @@ A modern weather forecast app built with React and Vite. Instantly get current, 
 
 ## Demo
 
-[live Demo](...)
+[Live Demo](https://rizalamar.github.io/weather-app-v3/)
 
 --
 
