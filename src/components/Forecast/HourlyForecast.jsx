@@ -5,15 +5,15 @@ export default function HourlyForecast({ weather }) {
 
 	const hours = weather?.days?.[0].hours;
 	return (
-		<div className="w-full">
+		<div className="w-full px-0 sm:px-2">
 			<h2 className="px-3 mb-2 text-lg font-semibold text-center">
 				Hourly Forecast
 			</h2>
 
-			<div className="flex items-center gap-3 py-2 overflow-x-auto">
+			<div className="flex items-center gap-3 sm:gap-4 py-2 overflow-x-auto">
 				{hours.map((hour, index) => (
 					<div
-						className="flex flex-col items-center p-3 space-y-2 text-sm rounded-xl bg-white/10 shadow min-w-[60px]"
+						className="flex flex-col items-center p-3 space-y-2 text-sm rounded-xl bg-white/10 shadow min-w-[60px] sm:min-w-20 md:min-w-[100px]"
 						key={index}
 					>
 						<p className="text-xs font-medium">

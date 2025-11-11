@@ -8,7 +8,7 @@ export default function DailyForecast({ weather }) {
 	const maxTemp = Math.max(...daily.map((d) => d.tempmax));
 
 	return (
-		<div className="h-full px-1">
+		<div className="h-auto sm:h-full px-1">
 			<h2 className="px-3 mb-2 text-lg font-semibold text-center">
 				10-Day Forecast
 			</h2>

@@ -4,7 +4,7 @@ import DailyForecast from "./DailyForecast";
 
 export default function WeatherForecast({ weather }) {
 	return (
-		<section className="flex flex-col w-full max-w-xl max-h-[700px] h-[700px] p-5 space-y-5 shadow-lg rounded-xl backdrop-blur-sm text-slate-900">
+		<section className="flex flex-col w-full max-w-xl lg:max-w-2xl p-5 space-y-5 shadow-lg rounded-xl backdrop-blur-sm bg-sky-100/40 text-slate-900 h-auto sm:h-[700px] max-h-[700px]">
 			<div className="flex flex-col h-full gap-4 overflow-hidden">
 				<div className="shrink-0">
 					<HourlyForecast weather={weather} />

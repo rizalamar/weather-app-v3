@@ -14,7 +14,7 @@ export default function AdditionalConditions({
 	];
 
 	return (
-		<div className="grid grid-cols-2 gap-4 text-sm text-center md:grid-cols-4">
+		<div className="grid grid-cols-4 gap-4 text-sm text-center">
 			{items.map((item, index) => (
 				<div
 					className="flex flex-col items-center gap-2 p-2"
